@@ -1,0 +1,20 @@
+public class Habit {
+    private String date;
+    private String habit;
+
+    // Initializes habit object
+    public Habit(String date, String habit) {
+        this.date = date;
+        this.habit = habit;
+    }
+
+    // Return the date of the started habit
+    public String getDate() {
+        return date;
+    }
+
+    // Returns the name of the habit
+    public String getHabit() {
+        return habit;
+    }
+}

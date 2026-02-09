@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr; /* header + content */
+    height: 100vh;
+    width: 100vw;
+    background: #a8a8a8;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+p.main {
+    font-size: small;
+    text-indent: 5px;
+}
+
+.container {
+    display: grid;       /* puts children side by side */
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 6fr 6fr;
+    grid-template-areas:
+        "title title title title"
+        "api levels history goal"
+        "habits habits additional systems"
+        "definitions definitions results results";
+    column-gap: 10px;
+    row-gap: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin: 20px;
+    background: #ffffff;
+}
+
+.container > * {
+    min-height: 0; /* allow shrinking */
+    max-height: 100%; /* never exceed the cell */
+    overflow: auto; /* or auto if you want scroll inside cells */
+    box-sizing: border-box; /* include padding in sizing */
+    margin: 5px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.api {
+    grid-area: api;
+}
+
+.levels {
+    grid-area: levels;
+}
+
+.history {
+    grid-area: history;
+}
+
+.goal {
+    grid-area: goal;
+}
+
+.habits {
+    grid-area: habits;
+}
+
+.additional {
+    grid-area: additional;
+}
+
+.systems {
+    grid-area: systems;
+}
+
+.definitions {
+    grid-area: definitions;
+}
+
+.results {
+    grid-area: results;
+}
+
+.title {
+    grid-area: title;
+}
+
+.block {
+    flex: 1;             /* each takes equal width */
+    padding: 10px;
+    background: #f0f0f0;
+}

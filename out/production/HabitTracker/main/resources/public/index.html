@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <title>System Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="title">
+        <h1>System Tracker // an idea for maintaining consistency</h1>
+    </div>
+    <div class="api">
+        <form id="habitForm">
+            <input type="text" id="habitName" placeholder="New system..." required>
+            <button type="submit">Add System</button>
+        </form>
+
+        <form id="levelForm">
+            <button type="submit">Level Up?</button>
+        </form>
+
+        <form id="addHabForm">
+            <input type="text" id="addHabName" placeholder="New system..." required>
+            <button type="submit">Add Additional Habit</button>
+        </form>
+
+    </div>
+    <div class="levels">
+        <p>level </p>
+        <p class="main" style="display: inline-block;" id="levelP"></p>
+        <script src="levelscript.js"></script>
+    </div>
+    <div class="history"></div>
+    <div class="goals">
+        <h2>Goal for the project</h2>
+        <p>In line with what we are doing with the bullet journal, this project essentially asks us to (1) take
+            information from the bullet journal, then (2) determines whether it is time to step up on the number of
+            habits in the system.</p>
+    </div>
+    <div class="habits">
+        <table id="habitTable">
+            <thead>
+            <tr>
+                <th>System</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script src="main.js"></script>
+    </div>
+    <div class="additional">
+    <table id="addhabTable">
+        <thead>
+        <tr>
+            <th>System</th>
+            <th>Done</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+        <script src="addhabscript.js"></script>
+    </div>
+    <div class="systems"></div>
+    <div class="definitions">
+        <h2>List of System Definitions</h2>
+        <dl>
+            <dt>sleep</dt>
+            <dd>go to sleep and wake up at the same time (one day reprieve for bed time)</dd>
+            <dt>bujo</dt>
+            <dd>write a to-do list every day in my journal</dd>
+            <dt>exercise</dt>
+            <dd>do some exercise every day (besides sunday)</dd>
+            <dt>academics</dt>
+            <dd>plan to do proto-academic work from 9/10 am to 5 pm</dd>
+            <dt>mental</dt>
+            <dd>participate in therapy and take medication daily (when available)</dd>
+            <dt>planning</dt>
+            <dd>request a career center meeting after each meeting</dd>
+        </dl>
+    </div>
+    <div class="results"></div>
+</div>
+</body>
+</html>

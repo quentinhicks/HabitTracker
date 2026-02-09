@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html> -->
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>System Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="title">
+        <h1>System Tracker // an idea for maintaining consistency</h1>
+    </div>
+    <div class="buttons">
+        <!--<form id="career">
+            <button id="career-btn" class="toggle-btn">Career</button>
+        </form>-->
+    </div>
+    <div class="api">
+        <form id="habitForm">
+            <input type="text" id="habitName" placeholder="New system..." required>
+            <button type="submit">Add System</button>
+        </form>
+
+        <form id="levelForm">
+            <button type="submit">Level Up?</button>
+        </form>
+
+        <form id="addHabForm">
+            <input type="text" id="addHabName" placeholder="New system..." required>
+            <button type="submit">Add Additional Habit</button>
+        </form>
+
+    </div>
+    <div class="levels">
+        <p>level </p>
+        <p class="main" style="display: inline-block;" id="levelP"></p>
+        <script src="levelscript.js"></script>
+    </div>
+    <div class="history">
+        <form id="saveForm">
+            <input type="text" id="weekNum1" placeholder="wk" required>
+            <button type="submit">Save</button>
+        </form>
+        <form id="loadForm">
+            <input type="text" id="weekNum2" placeholder="wk" required>
+            <button type="submit">Load</button>
+        </form>
+        <script src="savefile.js"></script>
+        <p>week </p>
+        <p class="main" style="display: inline-block;" id="weekP"></p>
+        <script src="weekscript.js"></script>
+    </div>
+    <div class="goals">
+        <p>In line with what we are doing with the bullet journal, this project essentially asks us to (1) take
+            information from the bullet journal, then (2) determines whether it is time to step up on the number of
+            habits in the system.</p>
+    </div>
+    <div class="habits" id="habits">
+        <table id="habitTable">
+            <thead>
+            <tr>
+                <th>Daily Habits</th>
+                <th data-day="0">M</th>
+                <th data-day="1">T</th>
+                <th data-day="2">W</th>
+                <th data-day="3">R</th>
+                <th data-day="4">F</th>
+                <th data-day="5">S</th>
+                <th data-day="6">U</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="main.js"></script>
+        <script src="scaletable.js"></script>
+    </div>
+    <div class="additional">
+        <table id="addHabTable">
+            <thead>
+            <tr>
+                <th>Additionals</th>
+                <th>Good?</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="addhabscript.js"></script>
+    </div>
+    <div class="systems">
+        <form id="systemsButton">
+            <button type="submit">Evaluate</button>
+        </form>
+        <table id="systemTable">
+            <tbody></tbody>
+        </table>
+        <script src="rendersystems.js"></script>
+        <br>
+        <p id="evalP"></p>
+    </div>
+    <div class="definitions">
+        <h2>List of Habit Definitions</h2>
+        <table id="defTable">
+            <tbody></tbody>
+        </table>
+        <script src="renderdefinitions.js"></script>
+    </div>
+    <div class="mistakes" id="mistakes">
+        <h2>Log Mistakes</h2>
+        <table id="mistakesTable">
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="mistakejournal.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr; /* header + content */
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.definitions table, .systems table .mistakes table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: transparent;
+}
+
+.definitions th, .definitions tr, .definitions td,
+.systems th, .systems tr, .systems td,
+.mistakes th, .mistakes tr, .mistakes td {
+    border: transparent;
+    padding: 0px;
+}
+
+.mistakes input, .mistakes textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.disappear {
+    display: none;
+}
+
+form {
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+p.main {
+    font-size: small;
+    text-indent: 5px;
+}
+
+.container {
+    display: grid;       /* puts children side by side */
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 6fr 6fr;
+    grid-template-areas:
+        "title title title buttons"
+        "api levels history goal"
+        "habits habits additional systems"
+        "definitions definitions mistakes mistakes";
+    column-gap: 10px;
+    row-gap: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin: 20px;
+    background: #ffffff;
+}
+
+.container > * {
+    min-height: 0; /* allow shrinking */
+    max-height: 100%; /* never exceed the cell */
+    overflow: auto; /* or auto if you want scroll inside cells */
+    box-sizing: border-box; /* include padding in sizing */
+    margin: 5px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/*GRID BLOCKS*/
+.api {
+    grid-area: api;
+}
+.levels {
+    grid-area: levels;
+}
+.history {
+    grid-area: history;
+}
+.goal {
+    grid-area: goal;
+}
+.habits {
+    grid-area: habits;
+}
+.additional {
+    grid-area: additional;
+}
+.systems {
+    grid-area: systems;
+}
+.buttons {
+    grid-area: buttons;
+}
+.definitions {
+    grid-area: definitions;
+}
+.mistakes {
+    grid-area: mistakes;
+}
+.title {
+    grid-area: title;
+}
+
+/*BLOCK INFORMATION*/
+.block {
+    flex: 1;             /* each takes equal width */
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+/*COLOR GRID STATES*/
+.state-0 { background-color: green; }
+.state-1 { background-color: yellow; }
+.state-2 { background-color: red; }
+.state-3 { background-color: transparent; }
+
+.toggle-btn {
+    background-color: #007bff;       /* normal blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+/* Pressed-down animation on click */
+.toggle-btn:active {
+    transform: scale(0.97);
+}
+/* When toggled on */
+.toggle-btn.active {
+    background-color: #0056b3;       /* darker shade */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3);
+}

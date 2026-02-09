@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Therapy writeup",
+    "opDef": "(1) Write plan for therapy session",
+    "completed": false,
+    "xp": 0,
+    "id": 298
+  },
+  {
+    "name": "Daily medication",
+    "opDef": "(1) Take when available in the morning",
+    "completed": true,
+    "xp": 0,
+    "id": 670
+  },
+  {
+    "name": "CCD meeting",
+    "opDef": "(1) Schedule CCD meeting after last one",
+    "completed": true,
+    "xp": 0,
+    "id": 289
+  }
+]
