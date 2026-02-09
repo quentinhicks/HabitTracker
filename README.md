@@ -20,4 +20,4 @@ To complete this project, I played around with the following ideas:
   *  Implemented automatic table resizing and interactive color change
 * JSON files to allow for the storage and transfer of information from the frontend to the backend
 * Java as the backend language -- utilizing various data structures and functionalities to evaluate and run code
-  * Including habit evaluation, saving and loading files, and a mistake journal  
+  * Including habit evaluation, saving and loading files, and a mistake journal (for days where my habit journey went awry)
